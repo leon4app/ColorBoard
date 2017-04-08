@@ -36,13 +36,12 @@
              blue:&blue
             alpha:nil];
     NSLog(@"red: %f, green: %f, blue: %f", red, green, blue);
-   // green = 0;
-   // blue = 1;
+    
     // Set the initial slider values
     self.redSlider.value = red;
     self.greenSlider.value = green;
     self.blueSlider.value = blue;
-   // color = [UIColor colorWithRed:0 green:0 blue:1 alpha:1];
+
     // Set the background color and text field value
     self.view.backgroundColor = color;
     self.textField.text = self.colorDescription.name;
