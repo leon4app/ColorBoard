@@ -27,7 +27,8 @@
 
 - (NSMutableArray *)colors
 {
-    if (!_colors) {
+    if (!_colors)
+    {
         _colors = [NSMutableArray array];
         BNRColorDescription *cd = [[BNRColorDescription alloc] init];
         [_colors addObject:cd];
@@ -57,7 +58,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSLog(@"prepareForSegue: with identifier: %@", segue.identifier);
-    if ([segue.identifier isEqualToString:@"newColor"]) {
+    if ([segue.identifier isEqualToString:@"newColor"])
+    {
         NSLog(@"segue.identifier isEqualToString:NewColor");
         // If we are adding a new color, create an instance
         // and add it to the colors array
@@ -70,7 +72,9 @@
         BNRColorViewController *mvc =
             (BNRColorViewController *)[nc topViewController];
         mvc.colorDescription = color;
-    } else if ([segue.identifier isEqualToString:@"ExistingColor"]) {
+    }
+    else if ([segue.identifier isEqualToString:@"ExistingColor"])
+    {
         NSLog(@"segue.identifier isEqualToString:ExistingColor");
         // For the push segue, the sender is the UITableViewCell
         NSIndexPath *ip = [self.tableView indexPathForCell:sender];
